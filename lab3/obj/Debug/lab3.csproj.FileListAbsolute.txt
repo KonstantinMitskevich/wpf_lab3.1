@@ -1,0 +1,15 @@
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\bin\Debug\lab3.exe.config
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\bin\Debug\lab3.exe
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\bin\Debug\lab3.pdb
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\MainWindow.baml
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\MainWindow.g.cs
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\App.g.cs
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3_MarkupCompile.cache
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3.g.resources
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3.Properties.Resources.resources
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3.csproj.GenerateResource.Cache
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3.exe
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3.pdb
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3_MarkupCompile.lref
+C:\Users\Exim\Documents\Visual Studio 2013\Projects\WPF\lab3\lab3\obj\Debug\lab3.csprojResolveAssemblyReference.cache

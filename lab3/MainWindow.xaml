@@ -1,0 +1,79 @@
+﻿<Window x:Class="lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:myns="clr-namespace:lab3"
+        Title="MainWindow" Height="500" Width="700"  MinHeight="500px" MinWidth="700px" MaxHeight="500px" MaxWidth="700px">
+    <Window.Resources>
+        <ControlTemplate x:Key="validationFailed">
+            <StackPanel Orientation="Horizontal">
+                <Border BorderBrush="Violet" BorderThickness="2" Height="30">
+                    <AdornedElementPlaceholder />
+                </Border>
+                <TextBlock Foreground="Red" FontSize="26" FontWeight="Bold">!</TextBlock>
+            </StackPanel>
+        </ControlTemplate>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={RelativeSource Self},Path=(Validation.Errors)[0].ErrorContent}"/>
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid Name="MainGrid" Background="LightYellow" Margin="0,0,-412,-272">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="161*"/>
+        </Grid.RowDefinitions>
+
+        <Label Target="{Binding ElementName=startValue}" FontSize="14px" HorizontalAlignment="Right" Margin="0,58,1013,126.075" RenderTransformOrigin="-1.217,-8.818" Width="62">X нач.</Label>
+        <TextBox  Name="startValue" Margin="97,60,896,168.075" Cursor="Arrow" BorderThickness="2px" Background="Khaki"
+                  Validation.ErrorTemplate="{StaticResource validationFailed}" >
+            <TextBox.Text >
+                <Binding Path="StartNum" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <myns:NumberRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Target="{Binding ElementName=endValue}" FontSize="14px" Margin="21,95,1013,126.075">X кон.</Label>
+        <TextBox  Name="endValue" Margin="97,95,896,133.075" Cursor="Arrow" BorderThickness="2px" Background="Khaki"
+                 Validation.ErrorTemplate="{StaticResource validationFailed}">
+            <TextBox.Text >
+                <Binding Path="EndNum" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <myns:NumberRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Target="{Binding ElementName=step}" FontSize="14px" Margin="21,132,1021,83.075">h шаг</Label>
+        <TextBox Name="stepValue" Margin="97,132,896,96.075" Cursor="Arrow" BorderThickness="2px" Background="Khaki"
+                  Validation.ErrorTemplate="{StaticResource validationFailed}">
+            <TextBox.Text >
+                <Binding Path="Step" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <myns:NumberRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Target="{Binding ElementName=nValue}" FontSize="14px" Margin="50,169,1000,57.075">N</Label>
+        <TextBox Name="nValue"   Margin="97,169,896,59.075" Cursor="Arrow" BorderThickness="2px" Background="Khaki" Validation.ErrorTemplate="{StaticResource validationFailed}">
+            <TextBox.Text >
+                <Binding Path="NValue" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <myns:NumberRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Button Name="calculate" Margin="21,19.925,881,403" Cursor="Hand" BorderThickness="2px" Background="Khaki" Content="Calculate" FontSize="25px" Click="Calculate" Grid.Row="1" />
+        <ListBox Name="textArea" HorizontalAlignment="Left" Height="331" Margin="281,58,0,0" VerticalAlignment="Top" Width="340" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
